@@ -1,5 +1,3 @@
-// import { products } from "./products.js";   <== importare la lista prodotti in modo locale
-
 function createProduct(parent, imgUrl, productTitle, textPrice) {
   const product = document.createElement("div");
   product.className = "product";
@@ -27,18 +25,49 @@ function createText(parent, productTitle, textPrice) {
   parent.append(title, price);
 }
 
-fetch("https://fakestoreapi.com/products") // <== importare la lista prodotti in modo remoto
-  .then((response) => response.json())
-  .then((data) => {
-    products = data;
-    renderProducts();
-  });
+// fetch("https://fakestoreapi.com/products") // <== importare la lista prodotti in modo remoto
+//   .then((response) => response.json())
+//   .then((data) => {
+//     products = data;
+//     renderProducts();
+//   });
 
-let products = [];
 const wrapperProducts = document.querySelector(".wrapper__products");
 
-function renderProducts() {
-  products.map((product) => {
+function renderProducts(listItems) {
+  listItems.map((product) => {
     createProduct(wrapperProducts, product.image, product.title, product.price);
   });
 }
+
+// Async await
+const getProductsList = async () => {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const data = await res.json();
+
+  return renderProducts(data);
+};
+
+getProductsList();
+
+const imgs = [
+  "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+  "https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+  "https://images.unsplash.com/photo-1551488831-68b4d0c92c13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+];
+
+const slider = document.querySelector(".overlay");
+
+let imgindex = 0;
+
+let imagesIndex = 0;
+
+let changeImg = setInterval(() => {
+  slider.style.backgroundImage = `url(${imgs[imagesIndex]})`;
+
+  if (imagesIndex < imgs.length - 1) {
+    imagesIndex++;
+  } else {
+    imagesIndex = 0;
+  }
+}, 3000);
