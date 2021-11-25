@@ -28,8 +28,6 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
       modal.style.display = "none";
     }, 2000);
 
-    
-
     // Nel caso in cui volessimo aggiungere una interazione col LocalStorage
     localStorage.setItem("totCartitems", cartList.length);
   });
@@ -91,10 +89,6 @@ const cartBtn = document.querySelector(".cartBtn");
 const cartProductsNum = document.querySelector(".cartProductsNum");
 const clearCartBtn = document.querySelector(".clearCart");
 
-
-
-
-
 if (localStorageTot === null) {
   localStorageTot = 0;
 }
@@ -128,9 +122,26 @@ let changeImg = setInterval(() => {
   }
 }, 3000);
 
-/* const acceptBtn = document.querySelector("#btn-accept"); */
 
-/* acceptBtn.addEventListener("click", hideModal, { once: true }); */
+const rew = [
+  
+  "Questo sito è bellissimo",
+  "Questo sito è brutto",
+  "Ordine arrivato subito",
 
-/* ${cartList.length} */
+];
 
+const reviews = document.querySelector (".reviews");
+let reviewsText = document.getElementById("text")
+let revIndex = 0;
+
+let changeRew = setInterval ( () => {
+
+  reviewsText.innerText = `${rew[revIndex]}`;
+  
+if (revIndex < rew.length - 1) {
+revIndex++
+} else {
+  revIndex = 0;
+}
+}, 2000) 

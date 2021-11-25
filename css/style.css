@@ -178,3 +178,18 @@ strong {
 
 }
 
+
+.reviews { height: 400px;
+           background-color: white;
+           position: relative;
+           display: flex;
+           font-size: 35px;
+           justify-content: center;
+
+}
+
+.reviews p { font-size: 20px;
+           
+
+
+}
