@@ -125,9 +125,9 @@ let changeImg = setInterval(() => {
 
 const rew = [
   
-  "Questo sito è bellissimo",
-  "Questo sito è brutto",
-  "Ordine arrivato subito",
+  "Esperienza positiva, farò sicuramente altri acquisti! - Roberto Rossi ",
+  "Questo sito è meraviglioso - Margherita Bianchi",
+  "Ordine arrivato subito - Stefania Gressi",
 
 ];
 
@@ -144,4 +144,4 @@ revIndex++
 } else {
   revIndex = 0;
 }
-}, 2000) 
+}, 4000) 
