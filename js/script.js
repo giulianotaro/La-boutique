@@ -91,6 +91,10 @@ const cartBtn = document.querySelector(".cartBtn");
 const cartProductsNum = document.querySelector(".cartProductsNum");
 const clearCartBtn = document.querySelector(".clearCart");
 
+
+
+
+
 if (localStorageTot === null) {
   localStorageTot = 0;
 }
@@ -129,3 +133,4 @@ let changeImg = setInterval(() => {
 /* acceptBtn.addEventListener("click", hideModal, { once: true }); */
 
 /* ${cartList.length} */
+
