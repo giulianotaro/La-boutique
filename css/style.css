@@ -9,6 +9,15 @@ body {
   border: 0;
 }
 
+h2 {
+  font-size: 80px;
+}
+
+.intestazione p {
+  font-size: 40px;
+  margin-top: -20px;
+}
+
 h4 {
   margin: 10px 0 0;
   padding: 0;
@@ -70,11 +79,10 @@ strong {
   margin-bottom: 0;
 }
 
-
 .cartBanner {
   display: flex;
   justify-content: flex-end;
-  background-image: linear-gradient(135deg, #f6416c 10%, #fff6b7 100%);
+  background-color: wheat;
 }
 
 .cartBanner .cartProductsNum {
@@ -127,7 +135,8 @@ strong {
 
   width: 150px;
 
-  border: 2px solid rgb(50, 50, 50);
+  border: 2px solid wheat;
+  border-radius: 10px;
 
   opacity: 0.78;
   cursor: pointer;
@@ -148,33 +157,55 @@ strong {
   align-self: flex-end;
 }
 
-
 .modal {
-    
-    position: fixed;
-    left: 35%;
-    top: 50%;
-    
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-    
-  
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    border-radius: 16px;
-    box-shadow: 0 0 16px black;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-  
-    transition: opacity 0.35s;
-    
-  }
+  position: fixed;
+  left: 35%;
+  top: 50%;
 
-  .modal p { font-size: 40px;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
 
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  box-shadow: 0 0 16px black;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+
+  transition: opacity 0.35s;
 }
 
+.modal p {
+  font-size: 40px;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: left;
+}
+
+.reviews {
+  display: flex;
+
+  height: auto;
+  width: auto;
+
+  background-color: rgb(255, 255, 255);
+  
+
+  text-align: left;
+
+  position: relative;
+  font-size: 35px;
+}
+
+#text {
+  font-size: 20px;
+
+  color: black;
+}
