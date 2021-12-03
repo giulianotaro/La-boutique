@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mohave:wght@400;700&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
 :root {
   --main_color: #353535;
 }
@@ -8,11 +10,11 @@ body {
   font-family: "Mohave", sans-serif;
   margin: 0;
   border: 0;
-  background-color: black;
+  background-color: white;
 }
 
-h2 { font-size: 90px;
-
+h2 {
+  font-size: 90px;
 }
 
 .intestazione p {
@@ -49,7 +51,7 @@ strong {
 .overlay {
   position: absolute;
   top: 0;
-  height: 350px;
+  height: 600px;
   width: 100%;
 
   background-image: url("https://www.abouther.com/sites/default/files/2018/09/21/main_-_mfw_street_style.jpg");
@@ -63,7 +65,7 @@ strong {
   position: relative;
   background: rgba(0, 0, 0, 0.335);
   top: 0;
-  height: 350px;
+  height: 600px;
   width: 100%;
   z-index: 2;
 }
@@ -98,8 +100,6 @@ strong {
   transition: 0.35s;
 }
 
-
-
 .cartBanner .clearCart:hover {
   transform: scale(1.6);
 }
@@ -110,14 +110,52 @@ strong {
   font-size: 1.5rem;
 }
 
+.divPrewieu {
+  height: 600px;
+  width: 50%;
+  background-color: white;
+  margin-left: 50px;
+}
+
+.titlePrewieu {
+  font-family: "PT Serif", serif;
+}
+
+.divPrewieu p {
+  font-family: "PT Serif", serif;
+  margin-top: 90px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.imgPrewieu {
+  height: 1100px;
+  width: 50%;
+  background-color: white;
+}
+
+.imgPrewieu img {
+  width: 300px;
+  height: auto;
+  margin-left: 40%;
+}
+
+#imgTwo {
+  width: 400px;
+  height: auto;
+  margin-left: 100%;
+}
 .wrapper__titles {
+  font-family: "PT Serif", serif;
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-content: center;
 }
 
 .wrapper__titles h2 {
   font-size: 2rem;
-  color: white;
+  color: black;
 }
 
 .wrapper__titles h4 {
@@ -136,14 +174,13 @@ strong {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  
+
   margin: 20px;
   padding: 10px;
 
   width: 200px;
 
   border-radius: 10px;
-  background-color: white;
 
   opacity: 0.78;
   cursor: pointer;
@@ -188,7 +225,6 @@ strong {
 
 .modal p {
   font-size: 40px;
-  
 }
 
 h5 {
@@ -196,7 +232,7 @@ h5 {
 }
 
 h3 {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 30px;
   text-align: left;
 }
@@ -211,21 +247,19 @@ h3 {
   width: 400px;
   margin-left: 35%;
 
-  
-  border-radius: 20px ;
-  border: 2px solid white;
+  border-radius: 20px;
+  border: 2px solid black;
 
-  
-
-  
   font-size: 35px;
 }
 
 #text {
   font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
-  color: white;
+  color: black;
 }
 
-.reviews p { font-size: 16px;}
+.reviews p {
+  font-size: 16px;
+}

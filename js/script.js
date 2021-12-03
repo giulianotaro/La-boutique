@@ -122,26 +122,22 @@ let changeImg = setInterval(() => {
   }
 }, 3000);
 
-
 const rew = [
-  
   "Esperienza positiva, farò sicuramente altri acquisti! - Roberto Rossi ",
   "Questo sito è meraviglioso - Margherita Bianchi",
   "Ordine arrivato subito - Stefania Gressi",
-
 ];
 
-const reviews = document.querySelector (".reviews");
-let reviewsText = document.getElementById("text")
+const reviews = document.querySelector(".reviews");
+let reviewsText = document.getElementById("text");
 let revIndex = 0;
 
-let changeRew = setInterval ( () => {
-
+let changeRew = setInterval(() => {
   reviewsText.innerText = `${rew[revIndex]}`;
-  
-if (revIndex < rew.length - 1) {
-revIndex++
-} else {
-  revIndex = 0;
-}
-}, 4000) 
+
+  if (revIndex < rew.length - 1) {
+    revIndex++;
+  } else {
+    revIndex = 0;
+  }
+}, 4000);
